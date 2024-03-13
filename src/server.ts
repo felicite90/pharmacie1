@@ -1,18 +1,16 @@
-const express=require('express');
-
-const mongoose=require('mongoose');
-
-const app = require('./app');
-
-
-const PORT = 3001;
-const MONGO_URL = 'mongodb://localhost:27017';
+import mongoose from 'mongoose';
 
 
 
 
-mongoose.connect(`${MONGO_URL}/pharmacieDB`).then(() => {
-    console.log('Connected to database '+ MONGO_URL)
+const PORT = 3004 ;
+;
+
+
+
+
+mongoose.connect(`'mongodb://localhost:27017'/pharmacie`).then(() => {
+    console.log('Connected to database '+ PORT)
     app.listen(PORT, () => {
         console.log('le serveur est lancé sur le port '+ PORT)
     })
