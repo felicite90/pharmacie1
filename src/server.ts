@@ -14,7 +14,7 @@ mongoose.connect(`${MONGO_URL}/pharmacieDB`).then(() => {
     app.listen(PORT,() => {
         console.log('le serveur est lancé sur le port '+ PORT);
     });
-}).catch(error => {
+}).catch(error=> {
     console.log(error);
     throw new Error("Erreur de connexion à la base de donnée!");
 });
